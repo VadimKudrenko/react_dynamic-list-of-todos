@@ -43,7 +43,6 @@ export const App: React.FC = () => {
 
     switch (filterSelect) {
       case 'all': {
-        newTodos = newTodos.map(todo => todo);
         break;
       }
 

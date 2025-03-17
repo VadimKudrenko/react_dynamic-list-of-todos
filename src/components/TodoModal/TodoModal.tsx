@@ -21,7 +21,10 @@ export const TodoModal: React.FC<Props> = ({ todo, hideModal }) => {
   useEffect(() => {
     getUser(todo.userId)
       .then(userInfo => setUser(userInfo))
-      .catch()
+      .catch(e => {
+        // eslint-disable-next-line no-console
+        console.warn(e.message);
+      })
       .finally(() => setIsLoading(false));
 
     return () => {
